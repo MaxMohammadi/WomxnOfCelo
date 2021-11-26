@@ -39,7 +39,7 @@ const Navbar = ({ toggle }) => {
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             <NavLogo onClick={toggleHome} to='/'>
-              dolla
+              Womxn of Celo
             </NavLogo>
             <MobileIcon onClick={toggle}>
               <FaBars />
@@ -66,7 +66,7 @@ const Navbar = ({ toggle }) => {
                   exact='true'
                   offset={-80}
                 >
-                  Discover
+                  Roadmap
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -78,7 +78,7 @@ const Navbar = ({ toggle }) => {
                   exact='true'
                   offset={-80}
                 >
-                  Services
+                  Mint
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -90,12 +90,12 @@ const Navbar = ({ toggle }) => {
                   exact='true'
                   offset={-80}
                 >
-                  Sign Up
+                  FAQ
                 </NavLinks>
               </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+              <NavBtnLink to='/signin'>Connect Wallet</NavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>

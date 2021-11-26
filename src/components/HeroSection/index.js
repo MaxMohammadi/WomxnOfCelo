@@ -27,14 +27,10 @@ function HeroSection() {
   return (
     <div>
       <HeroContainer id='home'>
-        <HeroBg>
-          <VideoBg playsInline autoPlay loop muted src={Video} type='video/mp4' />
-        </HeroBg>
         <HeroContent>
-          <HeroH1>Virtual Banking Made Easy</HeroH1>
+          <HeroH1>Empowering womxn around the world through blockchain and Art</HeroH1>
           <HeroP>
-            Sign up for a new account today and receive $250 in credit towards
-            your next payment.
+            The Womxn of Celo are now ready to mint. Claim yours today for 2 CELO each
           </HeroP>
           <HeroBtnWrapper>
             <Button
@@ -49,7 +45,7 @@ function HeroSection() {
               onMouseEnter={onHover}
               onMouseLeave={onHover}
             >
-              Get Started {hover ? <ArrowForward /> : <ArrowRight />}
+              Mint Now! {hover ? <ArrowForward /> : <ArrowRight />}
             </Button>
           </HeroBtnWrapper>
 

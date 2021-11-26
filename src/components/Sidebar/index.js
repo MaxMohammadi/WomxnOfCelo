@@ -38,7 +38,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact='true'
             offset={-80}
           >
-            Discover
+            Roadmap
           </SidebarLink>
           <SidebarLink
             to='services'
@@ -49,7 +49,7 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact='true'
             offset={-80}
           >
-            Services
+            Mint
           </SidebarLink>
           <SidebarLink
             to='signup'
@@ -60,11 +60,11 @@ const Sidebar = ({ isOpen, toggle }) => {
             exact='true'
             offset={-80}
           >
-            Sign Up
+            FAQ
           </SidebarLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to='/signin'>Sign In</SidebarRoute>
+          <SidebarRoute to='/signin'>Connect Wallet</SidebarRoute>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
