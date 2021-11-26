@@ -21,3 +21,26 @@ export const Button = styled(Link)`
     background: ${({ primary }) => (primary ? '#ffffff' : '#01BF71')};
   }
 `;
+
+export const ScrollButton = styled(Link)`
+  position: fixed;
+  border-radius: 50%;
+  background: ${({ primary }) => (primary ? '#01BF71' : '#010606')};
+  width: 50px;
+  height: 50px;
+  color: ${({ dark }) => (dark ? '#010606' : '#ffffff')};
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  background: rgba(255,105,180,0.75);
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: ${({ primary }) => (primary ? '#ffffff' : '#01BF71')};
+  }
+`;
+

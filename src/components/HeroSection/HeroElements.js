@@ -36,6 +36,41 @@ export const HeroContainer = styled.div`
   }
 `;
 
+export const ScrollContainer = styled.div`
+  background: #0c0c0c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  height: 800px;
+  position: relative;
+  z-index: 1;
+
+  :before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(rgba(0, 0, 0, 0.2)),
+        to(rgba(0, 0, 0, 0.2))
+      ),
+      -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(transparent));
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.6) 100%
+      ),
+      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
+    z-index: 2;
+  }
+`;
+
 export const HeroBg = styled.div`
   position: absolute;
   top: 0;
@@ -62,6 +97,16 @@ export const HeroContent = styled.div`
   padding: 8px 24px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+`;
+
+export const ScrollContent = styled.div`
+  z-index: 3;
+  max-width: 1200px;
+  position: fixed;
+  padding: 8px 24px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
 `;
 
@@ -99,6 +144,16 @@ export const HeroBtnWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+export const ScrollBtnWrapper = styled.div`
+  margin-top: 650px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  z-index: 1000;
 `;
 
 export const ArrowForward = styled(MdArrowForward)`
