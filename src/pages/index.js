@@ -3,13 +3,8 @@ import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
-import InfoSection from '../components/InfoSection';
-import {
-  homeObjOne,
-  homeObjTwo,
-  homeObjThree
-} from '../components/InfoSection/Data';
-import Services from '../components/Services';
+import Mint from '../components/Mint';
+import About from '../components/About';
 import { ScrollButton } from '../components/ButtonElements';
 import { IoIosArrowUp } from 'react-icons/io';
 
@@ -25,10 +20,9 @@ function Home() {
         <Sidebar isOpen={isOpen} toggle={toggle} />
         <Navbar toggle={toggle} />
         <HeroSection />
-        <InfoSection {...homeObjOne} />
-        <InfoSection {...homeObjTwo} />
-        <Services />
-        <InfoSection {...homeObjThree} />
+        <About />
+        <Mint />
+        <Mint />
         <Footer>
           <ScrollButton 
             to='home'

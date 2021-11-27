@@ -2,14 +2,9 @@ import React, { useState } from 'react';
 import { Button, ScrollButton } from '../ButtonElements';
 import { IoIosArrowUp } from 'react-icons/io';
 
-import Video from '../../videos/video.mp4';
 import {
   HeroContainer,
-  ScrollContainer,
-  HeroBg,
-  VideoBg,
   HeroContent,
-  ScrollContent,
   HeroH1,
   HeroP,
   HeroBtnWrapper,
@@ -48,11 +43,7 @@ function HeroSection() {
               Mint Now! {hover ? <ArrowForward /> : <ArrowRight />}
             </Button>
           </HeroBtnWrapper>
-
-
-
         </HeroContent>
-
           <ScrollBtnWrapper>
             <ScrollButton
               to='home'

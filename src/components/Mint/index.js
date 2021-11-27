@@ -10,11 +10,11 @@ import {
   ServicesIcon,
   ServicesH2,
   ServicesP
-} from './ServicesElements';
+} from './MintElements';
 
-const Services = () => {
+const Mint = () => {
   return (
-    <ServicesContainer id='services'>
+    <ServicesContainer id='mint'>
       <ServicesH1>Our Services</ServicesH1>
       <ServicesWrapper>
         <ServicesCard>
@@ -43,4 +43,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Mint;
