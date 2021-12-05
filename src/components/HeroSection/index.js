@@ -9,8 +9,6 @@ import {
   HeroP,
   HeroBtnWrapper,
   ScrollBtnWrapper,
-  ArrowForward,
-  ArrowRight
 } from './HeroElements';
 
 function HeroSection() {
@@ -22,6 +20,18 @@ function HeroSection() {
   return (
     <div>
       <HeroContainer id='home'>
+        {/* <ScrollBtnWrapper>
+            <Button
+              to='home'
+              smooth={true}
+              duration={500}
+              spy={true}
+              primary='true'
+              dark='true'
+            >
+              <IoIosArrowUp font-size="40px"/>
+            </Button>
+          </ScrollBtnWrapper> */}
         <HeroContent>
           <HeroH1>Empowering womxn around the world through blockchain and Art</HeroH1>
           <HeroP>
@@ -40,23 +50,10 @@ function HeroSection() {
               onMouseEnter={onHover}
               onMouseLeave={onHover}
             >
-              Mint Now! {hover ? <ArrowForward /> : <ArrowRight />}
+              Mint Now! {hover}
             </Button>
           </HeroBtnWrapper>
         </HeroContent>
-          <ScrollBtnWrapper>
-            <ScrollButton
-              to='home'
-              smooth={true}
-              duration={500}
-              spy={true}
-              primary='true'
-              dark='true'
-            >
-              <IoIosArrowUp font-size="40px"/>
-            </ScrollButton>
-          </ScrollBtnWrapper>
-
       </HeroContainer>
     </div>
   );

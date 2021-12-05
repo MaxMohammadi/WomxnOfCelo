@@ -39,7 +39,6 @@ const Footer = () => {
               <SocialIconLink
                 target='_blank'
                 aria-label='Twitter'
-                href='//www.twitter.com/briandesignz'
               >
                 <FaTwitter />
               </SocialIconLink>

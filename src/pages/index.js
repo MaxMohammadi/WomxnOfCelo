@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import Mint from '../components/Mint';
 import About from '../components/About';
-import { ScrollButton } from '../components/ButtonElements';
+import { ScrollButton, Button } from '../components/ButtonElements';
 import { IoIosArrowUp } from 'react-icons/io';
 
 function Home() {
@@ -21,27 +21,17 @@ function Home() {
         <Navbar toggle={toggle} />
         <HeroSection />
         <About />
-        <Mint />
-        <Mint />
-        <Footer>
-          <ScrollButton 
-            to='home'
-            smooth={true}
-            duration={1000}
-          >
-            <IoIosArrowUp font-size="40px"/>
-          </ScrollButton>
-        </Footer>
+        <Footer />
       </div>
-      <div>
-        <ScrollButton 
+      {/* <div>
+        <Button 
           to='home'
           smooth={true}
           duration={1000}
         >
           <IoIosArrowUp font-size="40px"/>
-        </ScrollButton>
-      </div>
+        </Button>
+      </div> */}
     </>
   );
 }

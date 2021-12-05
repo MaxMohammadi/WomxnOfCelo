@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { MdKeyboardArrowRight, MdArrowForward } from 'react-icons/md';
 
 export const HeroContainer = styled.div`
-  background: #FF1493;
+  background: #FF80B1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,29 +11,6 @@ export const HeroContainer = styled.div`
   position: relative;
   z-index: 1;
 
-  :before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(0, 0, 0, 0.2)),
-        to(rgba(0, 0, 0, 0.2))
-      ),
-      -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(transparent));
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.6) 100%
-      ),
-      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
-    z-index: 2;
-  }
 `;
 
 export const ScrollContainer = styled.div`
@@ -45,30 +22,6 @@ export const ScrollContainer = styled.div`
   height: 800px;
   position: relative;
   z-index: 1;
-
-  :before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: -webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        from(rgba(0, 0, 0, 0.2)),
-        to(rgba(0, 0, 0, 0.2))
-      ),
-      -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(transparent));
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.6) 100%
-      ),
-      linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 100%);
-    z-index: 2;
-  }
 `;
 
 export const HeroBg = styled.div`
@@ -80,14 +33,6 @@ export const HeroBg = styled.div`
   width: 100%;
   height: 100%;
   overflow: hidden;
-`;
-
-export const VideoBg = styled.video`
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  background: #232a34;
 `;
 
 export const HeroContent = styled.div`
@@ -111,7 +56,7 @@ export const ScrollContent = styled.div`
 `;
 
 export const HeroH1 = styled.h1`
-  color: #fff;
+  color: #FFF;
   font-size: 48px;
   text-align: center;
 
@@ -126,7 +71,7 @@ export const HeroH1 = styled.h1`
 
 export const HeroP = styled.p`
   margin-top: 24px;
-  color: #fff;
+  color: #FFF;
   font-size: 24px;
   text-align: center;
   max-width: 600px;
@@ -144,11 +89,14 @@ export const HeroBtnWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #FFEFDA;
 `;
 
 export const ScrollBtnWrapper = styled.div`
+  color: #FFEFDA;
   margin-top: 650px;
-  width: 100%;
+  height: 3rem;
+  width: 3rem;
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -2,17 +2,15 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const FooterContainer = styled.footer`
-  background-color: #101522;
+  background-color: #FF80B1;
 `;
 
 export const FooterWrap = styled.div`
-  padding: 48px 24px;
+  padding: 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1100px;
-  margin: 0 auto;
 `;
 
 export const FooterLinksContainer = styled.div`
@@ -67,7 +65,7 @@ export const FooterLink = styled(Link)`
 `;
 
 export const SocialMedia = styled.section`
-  max-width: 1000px;
+  max-width: 1500px;
   width: 100%;
 `;
 
@@ -75,10 +73,10 @@ export const SocialMediaWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
-  margin: 40px auto 0 auto;
+  max-width: 1000px;
+  margin: 20px auto 0px auto;
 
-  @media screen and (max-width: 820px) {
+  @media screen and (max-width: 1000px) {
     flex-direction: column;
   }
 `;
