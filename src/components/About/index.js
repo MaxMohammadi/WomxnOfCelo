@@ -1,20 +1,22 @@
 import React from 'react';
-import Carousel from "./carousel";
-import {
-  ServicesContainer,
-  ServicesH1,
-  ServicesWrapper,
-} from './AboutElements';
+import Slider from "./swiper";
+import "./about-us.scss";
 
 const About = () => {
-  return (
-    <ServicesContainer id='about'>
-      <ServicesH1>Our Bad Bitches on Display</ServicesH1>
-      <ServicesWrapper>
-        <Carousel />
-      </ServicesWrapper>
-    </ServicesContainer>
-  );
+
+    return (
+        // <div id="about-us" className="relative">
+            <div className="my-container flex flex-col lg:flex-row items-center relative">
+                <div className="about">
+                    <div className="w-full special-grid lg:gap-5 xl:gap-8">
+                        <div className="hidden lg:block w-full overflow-hidden">
+                            <Slider />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        // {/* </div> */}
+    );
 };
 
 export default About;
