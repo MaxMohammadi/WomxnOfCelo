@@ -1,0 +1,16 @@
+@import "./variables.scss";
+.subheading {
+  position: relative;
+  z-index: 4;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 29px;
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    text-align: left;
+    font-size: 16px;
+    line-height: 38px;
+  }
+}

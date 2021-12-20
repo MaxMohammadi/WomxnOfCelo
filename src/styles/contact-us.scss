@@ -1,0 +1,75 @@
+@import "./variables.scss";
+#contact-us {
+  padding: 40px 0;
+  .subheading {
+    text-align: center;
+  }
+  .contact-grid {
+    margin: 24px 0;
+    display: grid;
+    gap: 24px;
+  }
+  .form-input {
+    background-color: rgba(130, 43, 43, 0.5);
+    padding: 20px;
+    width: 100%;
+    color: white;
+    border-radius: 40px;
+    border: 3px solid $red;
+  }
+  .form-input::placeholder {
+    color: white;
+  }
+  .submit {
+    width: 100%;
+    padding: 16px 40px;
+    color: #fff;
+    border-radius: 140px;
+    background: $red;
+  }
+  .line {
+    display: none;
+  }
+  .poof {
+    width: 100%;
+  }
+  @media (min-width: 1024px) {
+    padding: 100px 0;
+    padding-bottom: 40px;
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+    }
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .form-input {
+      grid-column: 1/1;
+    }
+    .comment {
+      grid-row: 1/4;
+      grid-column: 2/3;
+    }
+    .submit {
+      align-self: center;
+      margin: 0 auto;
+    }
+    .line {
+      display: block;
+      position: absolute;
+      top: 50%;
+      width: 90%;
+      height: 3px;
+      background: $red;
+      border-radius: 4px;
+      left: 105%;
+    }
+    .line-r {
+      right: 105%;
+      left: unset;
+    }
+  }
+
+  @media (min-width: 1280px) {
+  }
+}

@@ -1,0 +1,19 @@
+@import "./variables.scss";
+
+.heading {
+  position: relative;
+  z-index: 4;
+  color: white;
+  font-size: 32px;
+  line-height: 1.1;
+  transition: all 0.3s;
+  &:hover {
+    color: $red;
+  }
+  @media (min-width: 1024px) {
+    font-size: 60px;
+  }
+  @media (min-width: 1280px) {
+    font-size: 60px;
+  }
+}

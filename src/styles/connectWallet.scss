@@ -1,0 +1,24 @@
+.icon-logo {
+  /* width: 80%; */
+  height: 80%;
+}
+.wallet-connect-button {
+  margin: 5px 0 !important;
+  padding: 4px 16px !important;
+  width: 100% !important;
+}
+
+.connect-modal {
+  background-color: #21ba44 !important;
+}
+.cnct-wallet {
+  background: transparent !important;
+  padding: 0 !important;
+}
+.pop-over {
+  position: relative !important;
+  z-index: 40;
+}
+.chakra-popover__popper {
+  z-index: 30 !important;
+}
