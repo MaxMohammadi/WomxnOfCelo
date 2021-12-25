@@ -24,7 +24,7 @@ export default function Logo({ wide }) {
   };
   return (
     <Anchor to="top" {...linkProps} className="flex justify-center">
-      <img src="/imgs/logo.png" layout="responsive" alt="Bombs logo" />
+      <img src="/imgs/WOC_logo.png" layout="responsive" alt="Bombs logo" />
     </Anchor>
   );
 }

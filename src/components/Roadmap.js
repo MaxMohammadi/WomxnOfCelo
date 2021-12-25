@@ -7,50 +7,42 @@ import Poof from "./Poof";
 const roadmap = [
   {
     key: 0,
-    month: "jul",
-    heading: "Aliquam malesuada",
-    text: " Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    month: "Jan",
+    heading: "Initial Mint",
   },
   {
     key: 1,
-    month: "aug",
-    heading: "Aliquam malesuada",
-    text: " Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    month: "Feb",
+    heading: "Community Partnerships",
   },
 
   {
     key: 1,
-    month: "Oct",
-    heading: "Aliquam malesuada",
-    text: " Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    month: "Mar",
+    heading: "Sales & Discounts",
   },
   {
     key: 0,
-    month: "sep",
-    heading: "Aliquam malesuada",
-    text: " Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    month: "Apr",
+    heading: "Second Gen Collection Presale",
   },
   {
     key: 0,
-    month: "nov",
-    heading: "Aliquam malesuada",
-    text: " Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    month: "May",
+    heading: "Solana Blockchain Mint",
   },
   {
     key: 1,
-    month: "dec",
-    heading: "Aliquam malesuada",
-    text: " Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    month: "Jun",
+    heading: "Gated Discord Community",
   },
 ];
 export default function Roadmap() {
   return (
     <div id="roadmap" className="relative">
       <div className="my-container relative">
-        <img className="absolute bomb" src="/imgs/brick.png" alt="bomb" />
 
-        <Poof className="poof" />
-        <Heading>roadmap</Heading>
+        <Heading>Roadmap</Heading>
         <div className="line-h line1 hidden lg:block"></div>
         <div className="line-h line2 hidden lg:block"></div>
         <div className="line-h line3 hidden lg:block"></div>

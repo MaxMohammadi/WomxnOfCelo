@@ -1,7 +1,10 @@
 @import "./variables.scss";
 
+
 #team {
   padding-top: 60px;
+
+  background: linear-gradient(180deg, rgba(130, 43, 43, 0) 0%, #90d2c8 transparent);
 
   .heading {
     text-align: center;

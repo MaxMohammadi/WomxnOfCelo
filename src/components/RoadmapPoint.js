@@ -32,7 +32,6 @@ export default function RoadmapPoint({ point, idx }) {
         <motion.div key={idx} variants={item} className="milestone milestone-month">
           {point.month}
         </motion.div>
-        <img className="bomb-point" src="/imgs/bomb.png" alt="bomb" />
       </div>
       <motion.div variants={item1} key={2} className="w-3/4 milestone milestone-content">
         <p className="month-heading">{point.heading}</p>

@@ -17,12 +17,12 @@ export default function Slider() {
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={5}
+        slidesPerView={3}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
           depth: 80,
-          modifier: 2,
+          modifier: 5,
           slideShadows: true,
         }}
         loop={true}
@@ -31,37 +31,37 @@ export default function Slider() {
         <SwiperSlide>
           <div className="slide">
             {" "}
-            <img src="/imgs/1.png" alt="bomb kicks" />
+            <img src="/imgs/woman_1.png" alt="bomb kicks" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide">
-            <img src="/imgs/2.png" alt="bomb kicks" />
+            <img src="/imgs/woman_2.png" alt="bomb kicks" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide">
-            <img src="/imgs/3.png" alt="bomb kicks" />
+            <img src="/imgs/woman_3.png" alt="bomb kicks" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide">
-            <img src="/imgs/4.png" alt="bomb kicks" />
+            <img src="/imgs/woman_4.png" alt="bomb kicks" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide">
-            <img src="/imgs/5.png" alt="bomb kicks" />
+            <img src="/imgs/woman_5.png" alt="bomb kicks" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide">
-            <img src="/imgs/6.png" alt="bomb kicks" />
+            <img src="/imgs/woman_6.png" alt="bomb kicks" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="slide">
-            <img src="/imgs/7.png" alt="bomb kicks" />
+            <img src="/imgs/woman_7.png" alt="bomb kicks" />
           </div>
         </SwiperSlide>
       </Swiper>

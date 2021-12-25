@@ -5,26 +5,17 @@ import { motion } from "framer-motion";
 import SubHeading from "./SubHeading";
 import Heading from "./Heading";
 const team = [
+
   {
-    name: "Sheldon",
-    position: "CEO",
-    imgSrc: "/imgs/2.png",
-  },
-  {
-    name: "Sergey",
+    name: "Roselina Luera",
     position: "Artist",
-    imgSrc: "/imgs/5.png",
-  },
-  {
-    name: "Alex",
-    position: "Developer",
-    imgSrc: "/imgs/3.png",
+    imgSrc: "/imgs/roz.png",
   },
 
   {
-    name: "Oleksii",
+    name: "Max Mohammadi",
     position: "Developer",
-    imgSrc: "/imgs/1.png",
+    imgSrc: "/imgs/max.jpeg",
   },
 ];
 export default function Team() {
@@ -54,12 +45,12 @@ export default function Team() {
         <div className="special-grid">
           <Heading>
             <div className="">
-              bomb <span className="text-myRed">team</span>
+              Womxn of Celo <span className="text-myRed">team</span>
             </div>
           </Heading>
           <SubHeading>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+            Hey guys, we are Rosie and Max! One of us had skills in art and the other had skills in blockchain. 
+            So, we naturally decided to start an NFT collection to help young female artists also get into NFTs!
           </SubHeading>
         </div>
         <motion.div
@@ -67,7 +58,7 @@ export default function Team() {
           initial="hidden"
           animate={inView ? "show" : "hidden"}
           ref={ref}
-          className="team-members grid grid-cols-2 gap-5 xl:gap-10 lg:grid-cols-4"
+          className="team-members grid grid-cols-2 gap-5 xl:gap-10 lg:grid-cols-2"
         >
           {team.map((member, i) => (
             <motion.div

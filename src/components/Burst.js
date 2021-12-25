@@ -29,62 +29,62 @@ export default function Burst({ delay }) {
       animate={inView ? "show" : "hidden"}
       className="relative w-full burst"
     >
-      <motion.img
+      {/* <motion.img
         variants={item}
         key={1}
         className="phase phase1 "
         src="/imgs/burst/phase1.svg"
         alt="burst phase"
-      />
-      <motion.img
+      /> */}
+      {/* <motion.img
         variants={item}
         key={2}
         className="phase phase2 "
         src="/imgs/burst/phase2.svg"
         alt="burst phase"
-      />
-      <motion.img
+      /> */}
+      {/* <motion.img
         variants={item}
         key={3}
         className="phase phase3 "
         src="/imgs/burst/phase3.svg"
         alt="burst phase"
-      />
-      <motion.img
+      /> */}
+      {/* <motion.img
         variants={item}
         key={4}
         className="phase phase4 "
         src="/imgs/burst/phase4.svg"
         alt="burst phase"
-      />
-      <motion.img
+      /> */}
+      {/* <motion.img
         variants={item}
         key={5}
         className="phase phase5 "
         src="/imgs/burst/phase5.svg"
         alt="burst phase"
-      />
-      <motion.img
+      /> */}
+      {/* <motion.img
         variants={item}
         key={6}
         className="phase phase6 "
         src="/imgs/burst/phase6.svg"
         alt="burst phase"
-      />
+      /> */}
       <motion.img
         variants={item}
         key={7}
         className="phase phase7 "
-        src="/imgs/burst/phase7.svg"
+        src="/imgs/heart.png"
         alt="burst phase"
       />
-      <motion.img
+      {/* <motion.img
         variants={item}
         key={8}
         className="phase phase8 "
         src="/imgs/burst/phase8.svg"
         alt="burst phase"
-      />
+      /> */}
     </motion.div>
   );
 }

@@ -28,8 +28,8 @@ export default function Timer() {
   ) : (
     <div className=" flex items-center  mb-4 lg:mb-6  relative ">
       <p className="text-white top-4 relative font-mont font-bold">
-        Time till <br />
-        launch:
+        Minting <br />
+        Begins in:
       </p>
       <div className=" text-white  timer">
         <TimerCountItem time={timeLeft.days} text="Days" />

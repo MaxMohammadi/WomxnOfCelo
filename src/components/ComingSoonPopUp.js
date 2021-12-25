@@ -33,7 +33,6 @@ export default function ComingSoonPopUp({ showPopup, setShowPopup }) {
         )}
         {showMint && (
           <div className="popup-mint relative">
-            <img className="bomb " src="/imgs/bomb.png" alt="bomb" />
             <p className="text-white  uppercase text-xl lg:text-5xl ">Sale live now!</p>
             <p className="text-myRed  uppercase text-xl lg:text-5xl">Bomb Kicks!</p>
             <p className="py-4 text-center uppercase text-white font-bold">
