@@ -1,0 +1,77 @@
+@import "./variables.scss";
+.app {
+  background: $maroon;
+  .btn {
+    box-sizing: border-box;
+    display: block;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    padding: 9px 13px !important;
+    color: #fff;
+    background-color: $red;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    border: 3px solid transparent;
+    min-width: max-content;
+  }
+  .btn:hover {
+    background: $maroon;
+    border: 3px solid $maroon;
+    transform: translateX(-1px) translateY(-1px) scale(1.02);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 24px 55px -13px rgba(0, 0, 0, 0.4);
+  }
+  .btn-mint {
+    background: $red;
+  }
+  .btn-mint:hover {
+    background: $orange;
+  }
+  .outlined {
+    box-sizing: border-box;
+    border: 3px solid red;
+    border-radius: 50px;
+    background: transparent;
+  }
+
+  .anchor {
+    font-size: 14px;
+    min-width: max-content;
+    @apply cursor-pointer  font-bold  transform transition-all;
+  }
+  .anchor:hover {
+    color: $red;
+    transform: scale(1.1);
+  }
+  .socials-icon {
+    display: block;
+    color: white;
+    transition: all 0.5s ease-in-out;
+  }
+  .socials-icon:hover {
+    color: $red;
+  }
+
+  .special-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: 1024px) {
+    .special-grid {
+      gap: 40px;
+      grid-template-columns: 1.5fr 1.5fr;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .special-grid {
+      gap: 80px;
+      grid-template-columns: 1.1fr 1.5fr;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "./variables.scss";
+
+
+#team {
+  padding-top: 60px;
+
+  background: linear-gradient(180deg, rgba(130, 43, 43, 0) 0%, #90d2c8 transparent);
+
+  .heading {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .team-name {
+    color: $red;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  .team-pos {
+    color: white;
+    font-size: 12px;
+  }
+
+  @media (min-width: 1024px) {
+    .team-name {
+      font-size: 24px;
+    }
+    .team-pos {
+      font-size: 14px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .team-name {
+      font-size: 32px;
+    }
+    .team-pos {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,20 +1,64 @@
-import React from 'react';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "./styles/common.scss";
+import HeroSection from "./components/HeroSection";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import ModalMenu from "./components/ModalMenu";
+import ComingSoonPopUp from "./components/ComingSoonPopUp";
+import AboutUs from "./components/AboutUs";
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './pages';
-import SigninPage from './pages/signin';
+import Roadmap from "./components/Roadmap";
+import Team from "./components/Team";
+import FAQ from "./components/FAQ";
+import ContactUs from "./components/ContactUs";
+import Burst from "./components/Burst";
+export default function App() {
+  const [scrolled, setScrolled] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const handleScroll = (e) => {
+    if (e.target.scrollingElement.scrollTop < 10) setScrolled(false);
+    if (e.target.scrollingElement.scrollTop >= 10) setScrolled(true);
+  };
+  //scrolling listener
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
 
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  });
+  //connect wallet functions
+  const [userAddress, setUserAddress] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
-function App() {
+  const props_through = {
+    showPopup: showPopup,
+    setShowPopup: setShowPopup,
+    setUserAddress: setUserAddress,
+    userAddress: userAddress,
+  };
   return (
-    <Router>
-      <Switch>
-        <Route path='/' component={Home} exact />
-        <Route path='/signin' component={SigninPage} exact />
-      </Switch>
-    </Router>
+    <div className=" relative overflow-hidden app">
+      <div id="top"></div>
+
+      <Header
+        {...props_through}
+        setShowMenu={setShowMenu}
+        showMenu={showMenu}
+        scrolled={scrolled}
+      />
+
+      <HeroSection {...props_through} />
+      <AboutUs {...props_through} />
+      <Team />
+      <Roadmap />
+
+      <FAQ />
+      <ContactUs />
+      <Footer {...props_through} />
+
+      <ComingSoonPopUp showPopup={showPopup} setShowPopup={setShowPopup} />
+      <ModalMenu showMenu={showMenu} setShowMenu={setShowMenu} />
+    </div>
   );
 }
-
-export default App;

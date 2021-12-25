@@ -1,0 +1,46 @@
+@import "./variables.scss";
+#faq {
+  .my-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .faq-question {
+    font-size: 12px;
+    text-align: left;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 140px;
+    background: $red;
+  }
+  .faq-question-heading {
+    width: 90%;
+  }
+  .arrow-down {
+    padding-left: 4px;
+    transition: all 0.4s;
+  }
+  .bomb {
+    position: absolute;
+    top: -25%;
+    left: 86%;
+    width: 30%;
+    z-index: 0;
+  }
+  @media (min-width: 1024px) {
+    padding-top: 120px;
+    .bomb {
+      position: absolute;
+      top: -45%;
+      left: 105%;
+      width: 20%;
+      z-index: 0;
+    }
+  }
+
+  @media (min-width: 1280px) {
+  }
+}

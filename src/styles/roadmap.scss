@@ -1,0 +1,152 @@
+@import "./variables.scss";
+#roadmap {
+  background-color: $maroon;
+  padding: 60px 0;
+  .roadmap-path-wrapper {
+    @apply grid grid-cols-1 relative w-full;
+    column-gap: 40px;
+  }
+  .milestone-month {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 9;
+    font-size: 40px;
+    text-transform: uppercase;
+  }
+  .milestone-point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .milestone-content {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .month-heading {
+    color: $red;
+    font-size: 18px;
+  }
+  .month-text {
+    text-align: center;
+    color: white;
+    font-size: 12px;
+  }
+  .roadmap-path {
+    position: absolute;
+    width: 100%;
+
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .arc {
+    overflow: hidden;
+    position: absolute;
+    width: 35%;
+    height: calc(34.5% + 4px);
+    top: 18%;
+    left: 75%;
+  }
+  .arc.arc-l {
+    height: calc(35% + 4px);
+    top: 52.5%;
+    left: -10%;
+  }
+  .arc-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 4px solid $red;
+    border-left: none;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+  .arc-l .arc-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 4px solid $red;
+    border-right: none;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  .line-h {
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    background-color: $red;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .line1 {
+    float: left;
+    top: 18%;
+  }
+  .line2 {
+    top: 52.5%;
+  }
+  .line3 {
+    top: 87.5%;
+  }
+  .line-v {
+    margin: 5px 0;
+    width: 4px;
+    height: 40px;
+    background-color: $red;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .bomb {
+    position: absolute;
+    top: 25%;
+    left: -10%;
+    width: 10%;
+    z-index: 10;
+  }
+  .poof {
+    position: absolute;
+    top: 0;
+    width: 25%;
+    left: 82%;
+  }
+  .bomb-point {
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  @media (min-width: 1024px) {
+    .poof {
+      width: 15%;
+      left: 102%;
+    }
+    .roadmap-path-wrapper {
+      @apply grid grid-cols-2 relative w-full;
+      column-gap: 2%;
+      row-gap: 3.5%;
+    }
+    .month-heading {
+      font-size: 20px;
+    }
+    .month-text {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    padding: 90px 0;
+    .month-heading {
+      font-size: 24px;
+    }
+    .month-text {
+      font-size: 16px;
+    }
+  }
+}

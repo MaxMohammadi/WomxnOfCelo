@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Exo:wght@500;700;800&display=swap"); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "PeaceSans";
+  src: local("PeaceSans"), url(./PeaceSans.ttf) format("truetype");
+}
+body {
+  font-family: "PeaceSans", sans-serif !important;
+  background: black;
+}
+.font-mont {
+  font-family: "Montserrat", sans-serif;
+}
+.font-peace {
+  font-family: "PeaceSans", sans-serif;
+}
+
+.my-container {
+  width: 100%;
+  padding: 0 40px;
+  max-width: 864px;
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .my-container {
+    padding: 0;
+  }
+}
+@media (min-width: 1280px) {
+  .my-container {
+    max-width: 1080px;
+  }
+}
+
+/*Connect Wallet Section */

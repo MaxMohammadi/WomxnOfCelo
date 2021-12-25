@@ -1,0 +1,14 @@
+@import "./variables.scss";
+.footer {
+  background: $maroon;
+  width: 100%;
+  padding: 20px 0;
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: 1024px) {
+  }
+
+  @media (min-width: 1280px) {
+  }
+}
