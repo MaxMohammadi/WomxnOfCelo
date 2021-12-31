@@ -28,10 +28,10 @@ export default function WelcomeTo({
         <span className="text-white">Womxn</span> Around the World <br /> Through Blockchain and Art
       </motion.p>
 
-      <motion.div className="pb-5 lg:pb-0" variants={item} key={4}>
+      {/* <motion.div className="pb-5 lg:pb-0" variants={item} key={4}>
         <Timer />
-      </motion.div>
-      <motion.div
+      </motion.div> */}
+      {/* <motion.div
         variants={item}
         key={5}
         className="w-full connect-wallet z-20 flex flex-col items-center lg:grid lg:grid-cols-3 gap-6"
@@ -45,7 +45,7 @@ export default function WelcomeTo({
         <a className="block w-full" href="https://discord.com">
           <button className="btn  w-full"> Join The Discord</button>{" "}
         </a>
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 }

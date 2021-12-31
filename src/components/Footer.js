@@ -46,12 +46,12 @@ export default function Footer({ showPopup, setShowPopup, userAddress, setUserAd
             <div className="lg:block hidden ">
               <Socials />
             </div>
-            <ConnectWallet
+            {/* <ConnectWallet
               showPopup={showPopup}
               setShowPopup={setShowPopup}
               setUserAddress={setUserAddress}
               userAddress={userAddress}
-            />
+            /> */}
           </div>
         </div>
       </div>

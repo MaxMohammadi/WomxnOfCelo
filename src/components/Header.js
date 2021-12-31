@@ -62,7 +62,7 @@ export default function Header({
 
         <div className="hidden lg:flex lg:w-1/3 text-xs xl:text-base font-bold lg:gap-6   xl:gap-10 items-center  flex-shrink-0 min-w-max">
           <Socials />
-          {rendered && (
+          {/* {rendered && (
             <ConnectWallet
               header
               showPopup={showPopup}
@@ -70,7 +70,7 @@ export default function Header({
               setUserAddress={setUserAddress}
               userAddress={userAddress}
             />
-          )}
+          )} */}
         </div>
       </div>
     </div>
