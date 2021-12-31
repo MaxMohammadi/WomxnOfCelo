@@ -67,18 +67,12 @@ export default function ModalMenu({ showMenu, setShowMenu }) {
           </Anchor>
         </motion.div>
       ))}
-      <motion.div key={11} className="">
+      {/* <motion.div key={11} className="">
         <ConnectWallet />
-      </motion.div>
+      </motion.div> */}
       <motion.div key={12} className="  ">
         <Socials big modal />{" "}
       </motion.div>
-      <img
-        style={{ width: 64 }}
-        className="block mx-auto"
-        src="/imgs/dfinity-logo.png"
-        alt="dfinity-blockchain"
-      />
     </motion.div>
   );
 }

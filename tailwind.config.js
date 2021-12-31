@@ -12,7 +12,7 @@ module.exports = {
     extend: {
       colors: {
         maroon: "#822B2B",
-        myRed: "#FF3320",
+        myRed: "#26ce33",
       },
       maxWidth: {
         864: "864px",
