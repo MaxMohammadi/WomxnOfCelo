@@ -52,7 +52,6 @@ export default function App() {
       <AboutUs {...props_through} />
       <Team />
       <Roadmap />
-
       <FAQ />
       <ContactUs />
       <Footer {...props_through} />
