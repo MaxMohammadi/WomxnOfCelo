@@ -9,8 +9,6 @@ export default function Poof({ className }) {
       initial={{ scale: 0 }}
       animate={inView ? { scale: 1 } : { scale: 0 }}
       className={className}
-      src="/imgs/poof.png"
-      alt="poof"
     />
   );
 }
