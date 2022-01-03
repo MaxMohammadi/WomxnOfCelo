@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Burger from "./Burger";
 import Logo from "./Logo";
 import { Link as Anchor } from "react-scroll";
 import "../styles/header.scss";
 import Socials from "./Socials";
-import ConnectWallet from "./ConnectWallet";
+// import ConnectWallet from "./ConnectWallet";
+import { useContractKit } from '@celo-tools/use-contractkit';
+import { Link } from 'react-router-dom';
 
 export default function Header({
-  showPopup,
-  setShowPopup,
   userAddress,
-  setUserAddress,
   showMenu,
   setShowMenu,
   scrolled,
@@ -23,7 +22,6 @@ export default function Header({
     { href: "about-us", text: "About" },
     { href: "team", text: "Team" },
     { href: "roadmap", text: "Roadmap" },
-    // { href: "market", text: "Market" },
     { href: "faq", text: "FAQ" },
   ];
 
@@ -35,6 +33,18 @@ export default function Header({
     activeClass: "active",
     className: "anchor text-white font-mont ",
   };
+
+  const { address: addr, connect } = useContractKit();
+  const address = typeof addr === 'string' ? addr.toLowerCase() : addr;
+
+  useEffect(() => {
+    if (!address) {
+      return;
+    }
+
+    // registerUser({ address });
+  }, [address]);
+
   return (
     <div
       id="header"
@@ -62,15 +72,27 @@ export default function Header({
 
         <div className="hidden lg:flex lg:w-1/3 text-xs xl:text-base font-bold lg:gap-6   xl:gap-10 items-center  flex-shrink-0 min-w-max">
           <Socials />
-          {/* {rendered && (
-            <ConnectWallet
-              header
-              showPopup={showPopup}
-              setShowPopup={setShowPopup}
-              setUserAddress={setUserAddress}
-              userAddress={userAddress}
-            />
-          )} */}
+
+          {!address ? (
+            <button type="button" className="button--small" onClick={connect}>
+              Connect wallet
+            </button>
+          ) : (
+            <Link to="/profile" className="app-header__profile">
+              <span className="app-header__address">{`${address.slice(
+                0,
+                5
+              )}...${address.slice(-3)}`}</span>
+              <div className="app-header__icon">
+                {/* <ProfileIcon className="app-header__icon-svg" /> */}
+              </div>
+            </Link>
+          )}
+
+          {/* <ConnectWallet /> */}
+          {/* {rendered && ( */}
+            {/* <ConnectWallet /> */}
+          {/* )} */}
         </div>
       </div>
     </div>

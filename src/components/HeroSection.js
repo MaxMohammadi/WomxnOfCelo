@@ -22,6 +22,7 @@ export default function HeroSection({
           userAddress={userAddress}
           setUserAddress={setUserAddress}
         />
+
       </div>
     </motion.div>
   );

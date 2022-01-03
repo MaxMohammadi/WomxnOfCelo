@@ -11,7 +11,6 @@ import Roadmap from "./components/Roadmap";
 import Team from "./components/Team";
 import FAQ from "./components/FAQ";
 import ContactUs from "./components/ContactUs";
-import Burst from "./components/Burst";
 export default function App() {
   const [scrolled, setScrolled] = useState(false);
   const [showMenu, setShowMenu] = useState(false);

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import "../styles/modal-menu.scss";
 import { Link as Anchor } from "react-scroll";
 import Socials from "./Socials";
-import ConnectWallet from "./ConnectWallet";
+// import { ConnectWallet } from "./ConnectWallet";
 
 export default function ModalMenu({ showMenu, setShowMenu }) {
   const links = [
