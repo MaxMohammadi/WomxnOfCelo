@@ -17,9 +17,21 @@
     border: 3px solid transparent;
     min-width: max-content;
   }
+
+  .btn-center {
+    margin: 0;
+    position: absolute;
+    padding-top: 120px;
+    top: 90%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
   .btn:hover {
     background: $maroon;
-    border: 3px solid $maroon;
+    border: 3px solid white;
     transform: translateX(-1px) translateY(-1px) scale(1.02);
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 24px 55px -13px rgba(0, 0, 0, 0.4);

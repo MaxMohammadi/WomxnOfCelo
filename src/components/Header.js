@@ -74,18 +74,15 @@ export default function Header({
           <Socials />
 
           {!address ? (
-            <button type="button" className="button--small" onClick={connect}>
+            <button type="button" className="btn w-full" onClick={connect}>
               Connect wallet
             </button>
           ) : (
-            <Link to="/profile" className="app-header__profile">
-              <span className="app-header__address">{`${address.slice(
+            <Link to="/" className="app-header__profile">
+              <span className="btn w-full">{`${address.slice(
                 0,
                 5
               )}...${address.slice(-3)}`}</span>
-              <div className="app-header__icon">
-                {/* <ProfileIcon className="app-header__icon-svg" /> */}
-              </div>
             </Link>
           )}
 

@@ -1,7 +1,10 @@
-import React from "react";
 import { motion } from "framer-motion";
-import Timer from "./Timer";
-import ConnectWallet from "./ConnectWallet";
+// import Timer from "./Timer";
+// import ConnectWallet from "./ConnectWallet";
+import React from "react";
+
+import "../styles/common.scss";
+
 export default function WelcomeTo({
   setShowPopup,
   showPopup,
@@ -19,6 +22,9 @@ export default function WelcomeTo({
     show: { x: 0, opacity: 1, transition: { duration: 0.3 } },
     hidden: { x: "-60vw", opacity: 0, transition: { duration: 1 } },
   };
+
+
+
   return (
     <motion.div variants={cont} initial="hidden" animate="show" className="welcome-to ">
       <motion.p variants={item} key={1} className="title  ">
@@ -31,21 +37,8 @@ export default function WelcomeTo({
       {/* <motion.div className="pb-5 lg:pb-0" variants={item} key={4}>
         <Timer />
       </motion.div> */}
-      {/* <motion.div
-        variants={item}
-        key={5}
-        className="w-full connect-wallet z-20 flex flex-col items-center lg:grid lg:grid-cols-3 gap-6"
-      >
-        <ConnectWallet
-          showPopup={showPopup}
-          setShowPopup={setShowPopup}
-          setUserAddress={setUserAddress}
-          userAddress={userAddress}
-        />
-        <a className="block w-full" href="https://discord.com">
-          <button className="btn  w-full"> Join The Discord</button>{" "}
-        </a>
-      </motion.div> */}
+
+      
     </motion.div>
   );
 }

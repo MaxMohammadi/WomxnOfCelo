@@ -67,7 +67,7 @@ export default function Team() {
               className="w-full flex flex-col items-center"
             >
               <img
-                className="w-full block rounded-xl overflow-hidden z-10 mb-2 lg:mb-4 xl:mb-6"
+                className="w-full block rounded-xl overflow-hidden z-0 mb-2 lg:mb-4 xl:mb-6"
                 src={member.imgSrc}
                 alt={member.name}
               />

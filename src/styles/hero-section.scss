@@ -2,8 +2,8 @@
 #hero-section {
   margin: 0 auto;
   overflow: hidden;
-  padding-top: 120px;
-  padding-bottom: 0;
+  padding-top: 250px;
+  padding-bottom: 100px;
   display: flex;
   position: relative;
 
@@ -12,6 +12,7 @@
     @apply z-0 absolute top-0 left-0 w-full h-full bg-black opacity-50;
   }
   .welcome-to {
+    margin-top: -150px;
     padding: 50px 19px;
     width: 100%;
     display: flex;

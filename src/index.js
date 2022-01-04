@@ -1,22 +1,52 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import "./styles/common.scss";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ContractKitProvider } from '@celo-tools/use-contractkit';
 import '@celo-tools/use-contractkit/lib/styles.css';
+import { BrowserRouter as Router } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <ContractKitProvider
-      dapp={{
-        name: 'My awesome dApp',
-        description: 'My awesome description',
-        url: 'https://example.com',
-      }}
-    >
-      <App />
-    </ContractKitProvider>,
+    <BrowserRouter>
+      <ContractKitProvider
+        dapp={{
+          name: 'My awesome dApp',
+          description: 'My awesome description',
+          url: window.location.href.slice(0, window.location.href.length - 1),
+        }}
+        connectModal={{ 
+          style: {
+            content: {
+              top: '50%',
+              left: '50%',
+              right: 'auto',
+              bottom: 'auto',
+              transform: 'translate(-50%, -50%)',
+              border: 'unsert',
+              background: 'unset',
+              padding: 'unset',
+              color: 'black',
+            },
+            overlay: {
+              zIndex: 40,
+            },
+          },
+          overlayClassName: 'tw-z-40',
+        }
+        }
+      >
+        <Router>
+          <App />
+        </Router>
+        
+      </ContractKitProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

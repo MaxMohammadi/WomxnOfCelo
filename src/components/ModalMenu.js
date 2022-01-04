@@ -11,7 +11,6 @@ export default function ModalMenu({ showMenu, setShowMenu }) {
     { href: "about-us", text: "About Us" },
     { href: "team", text: "Team" },
     { href: "roadmap", text: "Roadmap" },
-    // { href: "market", text: "Market" },
     { href: "faq", text: "FAQ" },
   ];
   const linkProps = {
@@ -25,7 +24,6 @@ export default function ModalMenu({ showMenu, setShowMenu }) {
   const cont = {
     show: {
       height: "100vh",
-      zIndex: 20,
       opacity: 1,
       transition: {
         duration: 0.4,
@@ -35,7 +33,6 @@ export default function ModalMenu({ showMenu, setShowMenu }) {
     },
     hidden: {
       height: "100vh",
-      zIndex: 0,
       opacity: 0,
     },
   };
@@ -64,7 +61,7 @@ export default function ModalMenu({ showMenu, setShowMenu }) {
             {...linkProps}
           >
             {l.text}
-          </Anchor>
+           </Anchor>
         </motion.div>
       ))}
       {/* <motion.div key={11} className="">

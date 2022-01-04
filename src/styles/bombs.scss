@@ -8,6 +8,7 @@
   justify-content: center;
   position: relative;
   height: auto;
+  top:-170px;
   .bomb {
     display: block;
     width: 90%;
@@ -20,17 +21,18 @@
   .bomb2 {
     display: block;
     width: 60%;
-    z-index: 4;
+    margin-top: 40px;
+    z-index: 0;
   }
   .bomb1 {
     width: 65%;
     left: 20%;
-    z-index: 3;
+    z-index: 0;
   }
   .bomb8 {
     left: 80%;
     width: 50%;
-    z-index: 3;
+    z-index: 0;
   }
   .bomb9 {
     width: 25%;
@@ -60,17 +62,17 @@
       transition: all 0.5s;
       display: block;
       width: 40%;
-      z-index: 4;
+      z-index: 0;
     }
     .bomb1 {
       width: 52%;
       left: 20%;
-      z-index: 3;
+      z-index: 0; 
     }
     .bomb8 {
       left: 80%;
       width: 40%;
-      z-index: 3;
+      z-index: 0;
     }
     .bomb9 {
       width: 25%;

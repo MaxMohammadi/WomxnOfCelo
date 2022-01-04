@@ -17,8 +17,8 @@
 }
 .pop-over {
   position: relative !important;
-  z-index: 40;
+  z-index: 0;
 }
 .chakra-popover__popper {
-  z-index: 30 !important;
+  z-index: 0;
 }

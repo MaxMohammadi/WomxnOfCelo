@@ -17,54 +17,54 @@
     top: 37%;
     left: 43%;
     width: 30%;
-    z-index: 8;
+    z-index: 0;
   }
   .phase2 {
     top: 31%;
     left: 32%;
     width: 42%;
-    z-index: 7;
+    z-index: 0;
   }
   .phase3 {
     top: 22%;
     left: 22%;
     width: 55%;
-    z-index: 6;
+    z-index: 0;
   }
   .phase4 {
     top: 25%;
     left: 26%;
     width: 50%;
-    z-index: 5;
+    z-index: 0;
   }
   .phase5 {
     top: 5%;
     left: 12%;
     width: 85%;
-    z-index: 4;
+    z-index: 0;
   }
   .phase6 {
     top: 18%;
     left: 15%;
     width: 73%;
-    z-index: 3;
+    z-index: 0;
   }
   .phase7 {
     top: 4%;
     left: 4%;
     width: 95%;
-    z-index: 2;
+    z-index: 0;
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
   }
   .phase8 {
     width: 100%;
-    z-index: 1;
+    z-index: 0; 
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
   }
   .line-v {
     top: 50%;
     left: 50%;
-    z-index: 9 !important;
+    z-index: 0;
     width: 2px;
     height: 100%;
     background: #000;
@@ -73,7 +73,7 @@
   .line-h {
     top: 50%;
     left: 50%;
-    z-index: 9 !important;
+    z-index: 0;
     background: #000;
     transform: translateX(-50%) translateY(-50%);
     height: 2px;

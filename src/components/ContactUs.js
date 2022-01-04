@@ -23,7 +23,7 @@ export default function ContactUs() {
           {" "}
         </motion.div>
         
-        <form ref={ref} className="contact-form z-10 relative">
+        <form ref={ref} className="contact-form z-0 relative">
           <motion.div
             variants={cont}
             initial="hidden"

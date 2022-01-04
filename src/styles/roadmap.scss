@@ -11,7 +11,7 @@
     top: 55%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
-    z-index: 9;
+    z-index: 0;
     font-size: 40px;
     text-transform: uppercase;
   }
@@ -107,7 +107,7 @@
     top: 25%;
     left: -10%;
     width: 10%;
-    z-index: 10;
+    z-index: 0;
   }
   .poof {
     position: absolute;
