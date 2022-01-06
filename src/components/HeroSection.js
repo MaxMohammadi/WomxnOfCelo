@@ -93,11 +93,7 @@ export default function HeroSection({
                 </button>
               </div>
             ) : (
-              <div className="dropdown d-inline-flex align-items-center justify-content-center align-self-center">
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+              <div className="dropdown d-inline-flex align-items-center justify-content-center align-self-center flex-col space-y-4">
                 <br/>
                 <br/>
                 <br/>
@@ -116,7 +112,7 @@ export default function HeroSection({
                   leaveTo="transform opacity-0 scale-95"
                 >
                 
-                  <Menu.Items>
+                  <Menu.Items className="flex-col space-y-4">
                     <Menu.Item className="space-y-4">
                       {({ active }) => (
                         <div className="space-y-4">
@@ -158,8 +154,6 @@ export default function HeroSection({
                       
                   </Menu.Items>
                 </Transition>
-                <br/>
-                <br/>
                 <br/>
                 <br/>
                 <br/>
