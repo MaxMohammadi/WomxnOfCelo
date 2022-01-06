@@ -13,6 +13,9 @@ export default function AboutUs({
 }) {
   return (
     <div id="about-us" className="relative">
+      <br />
+      <br />
+      <br />
       <div className="my-container flex flex-col lg:flex-row items-center relative">
         <div className="about">
           <div className="w-full special-grid lg:gap-5 xl:gap-8">

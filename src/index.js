@@ -4,12 +4,21 @@ import './index.css';
 import "./styles/common.scss";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { ContractKitProvider } from '@celo-tools/use-contractkit';
+import { ContractKitProvider, Alfajores, ChainId, Mainnet } from '@celo-tools/use-contractkit';
 import '@celo-tools/use-contractkit/lib/styles.css';
 import { BrowserRouter as Router } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 
+import CeloDeployment from './metadata.json';
 
+// export const NETWORK =
+//   process.env.REACT_APP_NETWORK === 'celo' ? Mainnet : Alfajores;
+//   console.log(`Running on ${NETWORK.name}, Contract Address - ${getDeployment(NETWORK.chainId).address}`
+// );
+
+// export function getDeployment(chainId) {
+//   return chainId === ChainId.Mainnet ? CeloDeployment : CeloDeployment.alfajores;
+// }
 
 ReactDOM.render(
   <React.StrictMode>
@@ -38,8 +47,9 @@ ReactDOM.render(
             },
           },
           overlayClassName: 'tw-z-40',
-        }
-        }
+        }}
+        // network={NETWORK}
+        // networks={[NETWORK]}
       >
         <Router>
           <App />
