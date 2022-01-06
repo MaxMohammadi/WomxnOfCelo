@@ -9,7 +9,7 @@ import '@celo-tools/use-contractkit/lib/styles.css';
 import { BrowserRouter as Router } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 
-import CeloDeployment from './metadata.json';
+// import CeloDeployment from './metadata.json';
 
 // export const NETWORK =
 //   process.env.REACT_APP_NETWORK === 'celo' ? Mainnet : Alfajores;
