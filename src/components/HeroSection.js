@@ -4,10 +4,14 @@ import WelcomeTo from "./WelcomeTo";
 import { motion } from "framer-motion";
 import Bombs from "./Bombs";
 import { useEffect, useState} from "react";
+// import { Contract} from '@ethersproject/contracts';
 import { useContractKit, useGetConnectedSigner } from '@celo-tools/use-contractkit';
 import "../styles/common.scss";
 import { Fragment } from 'react'
 import { Menu, Transition } from '@headlessui/react'
+import web3 from 'web3';
+import WomxnOfCelo from "./../abi/WomxnOfCelo.json";
+// import { getDeployment, NETWORK } from '..';
 
 export default function HeroSection({
   showPopup,
@@ -29,45 +33,33 @@ export default function HeroSection({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+
+  // const mintNFT = (qty) => {
+  //   setMinting(true);
+
+  // }
+
   async function mint(qty) {
-    // let reciept;
-    // try {
-    //   setMinting(true);
-    //   await performActions(async (kit) => {
-    //     const signer = await getConnectedSigner();
-    //     const balance = await signer.getBalance();
-    //     const cApe = (
-    //       new Contract(deployment.address, deployment.abi, signer) as CeloApes
-    //     ).connect(signer);
-    //     const price = await cApe.cost();
-    //     const totalPrice = price.mul(qty);
+    try {
+      setMinting(true);
+      await performActions(async (kit) => {
+        const networkId = await web3.eth.net.getId()
+        const deployedNetwork = WomxnOfCelo.networks[networkId]
 
-    //     if (totalPrice.gte(balance)) {
-    //       toast.warning(
-    //         'Low CELO Balance!',
-    //         `You are short of ${utils.formatEther(
-    //           totalPrice.sub(balance).toString()
-    //         )} CELO only. Hurry and topup your wallet to mint Apes!`
-    //       );
-    //       return;
-    //     }
+        const contract = new kit.registry.Contract(WomxnOfCelo.abi, deployedNetwork && deployedNetwork.address);
 
-    //     reciept = await (
-    //       await cApe.mint(await signer.getAddress(), qty, { value: totalPrice })
-    //     ).wait();
-    //     console.log(reciept);
-    //     toast.success(
-    //       'Horrah! You are now part of Kingdom',
-    //       undefined,
-    //       reciept.transactionHash
-    //     );
-    //   });
-    // } catch (error) {
-    //   console.error(error);
-    //   toast.error('Oops! Something went wrong', error.message);
-    // } finally {
-    //   setMinting(false);
-    // }
+        const tx = await contract.mint(qty, { from: account });
+
+        console.log(tx);
+
+        // const signer = await getConnectedSigner();
+        // const balance = await signer.getBalance();
+      });
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setMinting(false);
+    }
   }
 
   return (
@@ -132,7 +124,7 @@ export default function HeroSection({
                         <a href="#/" className={classNames(
                           active ? 'bg-gray-100 text-gray-900 py-10' : 'text-gray-100',
                           'block px-4 py-2 text-sm btn py-10'
-                        )} onClick={() => mint(1).catch(console.error)}>
+                        )} onClick={() => mint(5).catch(console.error)}>
                           5 Womxn
                         </a>
                         </div>
