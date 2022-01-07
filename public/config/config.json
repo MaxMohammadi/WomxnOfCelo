@@ -1,0 +1,16 @@
+{
+  "CONTRACT_ADDRESS": "0x50826Faa5b20250250E09067e8dDb1AFa2bdf910",
+  "SCAN_LINK": "https://explorer.celo.org/address/0x50826Faa5b20250250E09067e8dDb1AFa2bdf910",
+  "NETWORK": {
+    "NAME": "Celo (Mainnet)",
+    "SYMBOL": "CELO",
+    "ID": 42220
+  },
+  "NFT_NAME": "Womxn of Celo",
+  "SYMBOL": "WMXN",
+  "MAX_SUPPLY": 6969,
+  "WEI_COST": 2000000000000000000,
+  "DISPLAY_COST": 2,
+  "GAS_LIMIT": 285000,
+  "SHOW_BACKGROUND": true
+}

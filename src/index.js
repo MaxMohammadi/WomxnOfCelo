@@ -1,13 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
 import "./styles/common.scss";
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { ContractKitProvider, Alfajores, ChainId, Mainnet } from '@celo-tools/use-contractkit';
-import '@celo-tools/use-contractkit/lib/styles.css';
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import {
+  ContractKitProvider,
+  Alfajores,
+  ChainId,
+  Mainnet,
+} from "@celo-tools/use-contractkit";
+import "@celo-tools/use-contractkit/lib/styles.css";
 import { BrowserRouter as Router } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
+
+import { Provider } from "react-redux";
+import store from "./redux/store";
 
 // import CeloDeployment from './metadata.json';
 
@@ -22,43 +30,44 @@ import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ContractKitProvider
-        dapp={{
-          name: 'My awesome dApp',
-          description: 'My awesome description',
-          url: window.location.href.slice(0, window.location.href.length - 1),
-        }}
-        connectModal={{ 
-          style: {
-            content: {
-              top: '50%',
-              left: '50%',
-              right: 'auto',
-              bottom: 'auto',
-              transform: 'translate(-50%, -50%)',
-              border: 'unsert',
-              background: 'unset',
-              padding: 'unset',
-              color: 'black',
+    <Provider store={store}>
+      <BrowserRouter>
+        <ContractKitProvider
+          dapp={{
+            name: "My awesome dApp",
+            description: "My awesome description",
+            url: window.location.href.slice(0, window.location.href.length - 1),
+          }}
+          connectModal={{
+            style: {
+              content: {
+                top: "50%",
+                left: "50%",
+                right: "auto",
+                bottom: "auto",
+                transform: "translate(-50%, -50%)",
+                border: "unsert",
+                background: "unset",
+                padding: "unset",
+                color: "black",
+              },
+              overlay: {
+                zIndex: 40,
+              },
             },
-            overlay: {
-              zIndex: 40,
-            },
-          },
-          overlayClassName: 'tw-z-40',
-        }}
-        // network={NETWORK}
-        // networks={[NETWORK]}
-      >
-        <Router>
-          <App />
-        </Router>
-        
-      </ContractKitProvider>
-    </BrowserRouter>
+            overlayClassName: "tw-z-40",
+          }}
+          // network={NETWORK}
+          // networks={[NETWORK]}
+        >
+          <Router>
+            <App />
+          </Router>
+        </ContractKitProvider>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -5,8 +5,11 @@ import { Link as Anchor } from "react-scroll";
 import "../styles/header.scss";
 import Socials from "./Socials";
 // import ConnectWallet from "./ConnectWallet";
-import { useContractKit } from '@celo-tools/use-contractkit';
-import { Link } from 'react-router-dom';
+import { useContractKit } from "@celo-tools/use-contractkit";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { connect } from "../redux/blockchain/blockchainActions";
+import { fetchData } from "../redux/data/dataActions";
 
 export default function Header({
   userAddress,
@@ -15,6 +18,9 @@ export default function Header({
   scrolled,
 }) {
   const [rendered, setRendered] = useState(false);
+  const dispatch = useDispatch();
+  const blockchain = useSelector((state) => state.blockchain);
+  const data = useSelector((state) => state.data);
   useEffect(() => {
     window && setRendered(true);
   }, []);
@@ -34,16 +40,16 @@ export default function Header({
     className: "anchor text-white font-mont ",
   };
 
-  const { address: addr, connect } = useContractKit();
-  const address = typeof addr === 'string' ? addr.toLowerCase() : addr;
+  // const { address: addr, connect } = useContractKit();
+  // const address = typeof addr === "string" ? addr.toLowerCase() : addr;
 
-  useEffect(() => {
-    if (!address) {
-      return;
-    }
+  // useEffect(() => {
+  //   if (!address) {
+  //     return;
+  //   }
 
-    // registerUser({ address });
-  }, [address]);
+  //   // registerUser({ address });
+  // }, [address]);
 
   return (
     <div
@@ -51,7 +57,6 @@ export default function Header({
       className={` ${scrolled ? "bg-opacity-80 py-3 shadow-lg" : "py-7"}`}
     >
       <div className="my-container justify-between flex items-center">
-
         <div className="w-1/4 lg:w-1/8 flex-shrink-0 lg:hidden">
           <Logo wide={false} />
         </div>
@@ -73,22 +78,32 @@ export default function Header({
         <div className="hidden lg:flex lg:w-1/3 text-xs xl:text-base font-bold lg:gap-6   xl:gap-10 items-center  flex-shrink-0 min-w-max">
           <Socials />
 
-          {!address ? (
-            <button type="button" className="btn w-full" onClick={connect}>
+          {blockchain.account === "" ||
+          blockchain.account === undefined ||
+          blockchain.smartContract === null ? (
+            <button
+              type="button"
+              className="btn w-full"
+              onClick={(e) => {
+                e.preventDefault();
+                dispatch(connect());
+              }}
+            >
               Connect wallet
             </button>
           ) : (
             <Link to="/" className="app-header__profile">
-              <span className="btn w-full">{`${address.slice(
-                0,
-                5
-              )}...${address.slice(-3)}`}</span>
+              <span className="btn w-full">
+                {" "}
+                {blockchain.account.toString().substring(0, 4)}..
+                {blockchain.account.toString().substring(38, 42)}
+              </span>
             </Link>
           )}
 
           {/* <ConnectWallet /> */}
           {/* {rendered && ( */}
-            {/* <ConnectWallet /> */}
+          {/* <ConnectWallet /> */}
           {/* )} */}
         </div>
       </div>
